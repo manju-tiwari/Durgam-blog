@@ -1,0 +1,37 @@
+{% extends 'baseblog.html' %} {% block content %}
+
+ 
+
+ <div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left top">
+      <div class="card-body">
+        <h1>{% block title %} {{ PostDetail.title }} {% endblock title %}</h1>
+        <p class="text-muted">{{ PostDetail.author }} | {{ PostDetail.created_on }}</p>
+        <p class="card-text ">{{ PostDetail.content | safe }}</p>
+      </div>
+    </div> 
+
+    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+  </div>
+</div> 
+
+<h4 class="mx-4"> Add Comments ({{ num_comment }})</h4><hr>
+{% if not PostDetail.comments.all %}
+  No Comments Yet...
+{% else %}
+  {% for comment in PostDetail.comments.all %}
+  <strong class="mx-4">  
+  {{ comment.name }} - {{ comment.date_added }}
+ </strong>
+  <p class="mx-4"> {{ comment.body }}</p>
+  {% endfor %}
+{% endif %}
+<p><a class="btn btn-primary mx-2" href="{% url 'addcomment' PostDetail.id %}">Add Comment</a>
+<a class="btn btn-danger" href="{% url 'delete_comment' PostDetail.id %}">Delete Comment</a></p>
+
+
+
+{% endblock content %}
+
+

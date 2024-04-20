@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}document{%endblock%}</title>
+{% load static %}
+<link rel="stylesheet" href="{% static "zay.css" %}">
+</head>
+<body>
+<!-----Nav Bar start---->
+
+<div id="navbar">
+    <div style="margin-left:5em;">
+        <i class="mail"></i>
+        <a style="color:#cfd6e1; font-family:sarif;" href="mailto:info@company.com">info@company.com</a>
+       <i class="phone"></i>
+        <a style="color:#cfd6e1; font-size: .8em" href="tel:010-020-0340">010-020-0340</a>
+    </div>
+
+    <div class="img-src-logo">
+        <img class="img-src" src="{% static 'fblogo.png' %}">
+        <img class="img-src" src="{% static 'ig logo.jpg' %}">
+        <img class="img-src" src="{% static 'tw logo.jpg' %}">
+        <img class="img-src" src="{% static 'whats logo.png' %}">
+    </div>   
+</div>
+
+<!----Nav Bar End---->
+
+
+<!----Header start---->
+
+<div class="header">
+    <div>
+        <img class="zay-img" src="{% static 'zay-icon.png' %}"/>
+    </div>
+    
+    <div class="header-div">
+        <ul class="ul-header">
+            {% comment %} {{request.path}} {% endcomment %}
+            <li class="li-header"><a class="header-link"href="{% url 'homepage' %}">Home</a></li>
+            <li class="li-header"><a class="header-link"href="{% url 'about' %}">About</a></li>
+            <li class="li-header"><a class="header-link"href="{% url 'shop' %}">Shop</a></li>
+            <li class="li-header"><a class="header-link"href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="search-img">
+        <img class="icon-img" src="{% static 'search1.png' %}"/>
+        <img class="icon-img" src="{% static 'basket.png' %}"/>
+        <img class="icon-img" src="{% static 'sign.png' %}"/>
+    </div>
+</div>
+<!---end header-->
+</body>
+</html>

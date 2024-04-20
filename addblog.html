@@ -1,0 +1,36 @@
+{% extends 'baseblog.html' %} {% block content %}
+
+ 
+<form action="/book/addblog" method="POST">
+  {% csrf_token %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input class="form-control" type="text" name="title" id="title" >
+          <label for="author" class="form-label">Author</label>
+          <input class="form-control" type="text" name="author" id="author">
+          <label for="status">Status</label>
+    <select class="form-control" name="status" id="status" placeholder="select">
+      <option>select options</option>
+      <option>0</option>
+      <option>1</option>
+    </select>
+    
+          <label for="content" class="form-label">Content</label>
+          <textarea class="form-control" name="content" id="content" rows="3"></textarea>
+          <button class="btn btn-primary mt-3">Save </button>
+        </div>
+      </div>
+    </div> 
+    
+
+    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+  </div>
+</div> 
+</form>
+{% endblock content %}
+
+

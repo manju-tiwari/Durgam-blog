@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}document{%endblock%}</title>
+{% load static %}
+<link rel="stylesheet" href="{% static "zay.css" %}">
+</head>
+<body>
+<footer class="footer">
+    <div class="footer-div">
+        <p>
+            Copyright &copy; 2021 Company Name 
+            | Designed by <a rel="sponsored" href={% static "https://templatemo.com"%} target="_blank">TemplateMo</a>
+        </p>   
+    </div>
+</footer>
+
+
+</body>
+</html>

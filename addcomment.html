@@ -1,0 +1,14 @@
+{% extends 'baseblog.html' %} {% block content %}
+
+<h2 class="mx-4 mt-4">Add Comment</h2><hr>
+<div class="container m-4">
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+    <button class="btn btn-outline-primary mt-2" name="submit">Comment</button>
+</div>
+
+</form> 
+{% endblock content %}
+
+

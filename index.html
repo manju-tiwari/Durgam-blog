@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>index Page</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+    <p>This page is as a Django Template</p>
+    {% comment %} <li><a href="book/thebook1">thebook1</a></li> {% endcomment %}
+    <ol>
+    {% for i in books %}
+     <li><a href={{i}}>{{i}}</a></li>
+    
+     {% comment %} <li><a href="{%url bookpages i%}">{{i}}</a></li> // for name{% endcomment %}
+    {% endfor %}
+    </ol>
+    
+</body>
+</html>

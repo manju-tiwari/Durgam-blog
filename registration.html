@@ -1,0 +1,27 @@
+<html>  
+    <head>
+        <title>Registration Form</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+    </head>  
+<body>  
+    <form action="/book/registrationpage" method="get">
+    <h1 class="mx-4"> Registration form </h1><hr>  
+        <label class="mx-2 col-md-1" for="">Firstname:</label>
+        <input class="col-md-2" type="text" name="firstname"><br><br>
+        <label class="mx-2 col-md-1" for="">Last_name:</label>
+        <input class="col-md-2" type="text" name="last_name"><br><br>
+        <label class="mx-2 col-md-1" for="">Email:</label>
+        <input class="col-md-2" type="text" name="email"><br><br>
+        <label class="mx-2 col-md-1" for="">Password:</label>
+        <input class="col-md-2" type="password" name="password"><br><br>
+        <label class="mx-2 col-md-1" for="">Address:</label>
+        <textarea class="col-md-2" rows="2" name="address"></textarea><br><br>
+        <input class="btn btn-primary mx-5 col-md-1" type="submit" value="Sign Up">
+        <a button class="btn btn-primary col-md-1" href="{% url 'loginpage' %}" type="submit">Login</a></button>     
+    </form>   
+</body>  
+</html>
