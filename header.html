@@ -4,6 +4,17 @@
 <title>{% block title %}document{%endblock%}</title>
 {% load static %}
 <link rel="stylesheet" href="{% static "zay.css" %}">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VQZVB71PL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8VQZVB71PL');
+</script>
+
 </head>
 <body>
 <!-----Nav Bar start---->
