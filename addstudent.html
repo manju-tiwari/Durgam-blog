@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>userform</title>
+    <title>students</title>
 
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -18,11 +18,15 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="submit">
-    </form>    
-    
-</body>
+    <h1>Add Student Record</h1>
+    <form action="/book/addstudentform" method="get">
+        <label for="">name</label>
+        <input type="text" name="name"><br><br>
+        <label for="">f_name</label>
+        <input type="text" name="f_name"><br><br>
+        <label for="">roll no</label>
+        <input type="text" name="roll"><br><br>
+        <input type="submit">
+    </form>
+</body>    
 </html>
